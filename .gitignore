@@ -1,0 +1,28 @@
+node_modules/
+dist/
+
+# env files
+.env
+.env.local
+.env.development
+.env.test
+.env.production
+
+# OS / editors
+.DS_Store
+.vscode/
+.idea/
+
+# caches
+.eslintcache
+.prettiercache
+*.tsbuildinfo
+
+# test / coverage
+coverage/
+nyc_output/
+
+# misc
+logs/
+*.log
+.next/
