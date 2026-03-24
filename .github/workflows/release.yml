@@ -6,7 +6,7 @@ on:
 
 permissions:
   contents: read
-  id-token: write  # necessário para npm provenance
+  id-token: write # necessário para npm provenance
 
 jobs:
   release:
