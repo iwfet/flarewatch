@@ -1,8 +1,9 @@
 name: Release & Publish
 
 on:
-  release:
-    types: [published]
+  push:
+    tags:
+      - "v*"
 
 permissions:
   contents: read
@@ -38,9 +39,9 @@ jobs:
       - name: Build
         run: pnpm build
 
-      - name: Sync version with release tag
+      - name: Sync version with tag
         run: |
-          TAG="${{ github.event.release.tag_name }}"
+          TAG="${GITHUB_REF_NAME}"
           VERSION="${TAG#v}"
           npm pkg set version="$VERSION"
 
